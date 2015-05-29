@@ -1,0 +1,8 @@
+10_man_install.diff
+15_install.diff
+20_man_fixes.diff
+50_hurd.diff
+50_kfreebsd.diff
+50_autotools-dev.diff
+90_man_apparmor.diff
+60_disable_geneve_tests.diff
