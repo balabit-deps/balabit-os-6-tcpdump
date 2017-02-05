@@ -3,8 +3,10 @@ Description: Update man page to make AppArmor confinement more discoverable
 Forwarded: no (Ubuntu-specific)
 
 === modified file 'tcpdump.1.in'
---- a/tcpdump.1.in
-+++ b/tcpdump.1.in
+Index: tcpdump-4.8.1/tcpdump.1.in
+===================================================================
+--- tcpdump-4.8.1.orig/tcpdump.1.in
++++ tcpdump-4.8.1/tcpdump.1.in
 @@ -153,7 +153,11 @@
  analysis, and/or with the
  .B \-r
@@ -18,8 +20,8 @@ Forwarded: no (Ubuntu-specific)
  .B \-V
  flag, which causes it to read a list of saved packet files. In all cases,
  only packets that match
-@@ -1889,7 +1893,7 @@
- serviced the `new packet' interrupt.
+@@ -1888,7 +1892,7 @@
+ applied a time stamp to the packet.
  .SH "SEE ALSO"
  stty(1), pcap(3PCAP), bpf(4), nit(4P), pcap-savefile(@MAN_FILE_FORMATS@),
 -pcap-filter(@MAN_MISC_INFO@), pcap-tstamp(@MAN_MISC_INFO@)
