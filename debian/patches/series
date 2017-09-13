@@ -1,5 +1,5 @@
 install.diff
 man-section.diff
 platform-quirks.diff
-90_man_apparmor.diff
 disable-tests.diff
+90_man_apparmor.diff

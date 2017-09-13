@@ -1,3 +1,194 @@
+tcpdump (4.9.2-0ubuntu0.16.04.1) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: multiple security issues in tcpdump
+    - CVE-2017-13011: buffer overflow in util-print.c:
+      bittok2str_internal().
+    - CVE-2017-12989: RESP parser infinite loop in print-resp.c:
+      resp_get_length().
+    - CVE-2017-12990: ISAKMP parser infinite loops in print-isakmp.c,
+      several functions.
+    - CVE-2017-12995 DNS parser infinite loop in print-domain.c:
+      ns_print().
+    - CVE-2017-12997: LLDP parser infinite loop in print-lldp.c:
+      lldp_private_8021_print().
+    - CVE-2017-12893: buffer over-read in smbutil.c:name_len().
+    - CVE-2017-12894: buffer over-read in addrtoname.c:
+      lookup_bytestring().
+    - CVE-2017-12895: buffer over-read in print-icmp.c:icmp_print().
+    - CVE-2017-12896: buffer over-read in print-isakmp.c:
+      isakmp_rfc3948_print().
+    - CVE-2017-12897: buffer over-read in print-isoclns.c:
+      isoclns_print().
+    - CVE-2017-12898: buffer over-read in print-nfs.c:interp_reply().
+    - CVE-2017-12899: buffer over-read in print-decnet.c:
+      decnet_print().
+    - CVE-2017-12900: buffer over-read in util-print.c:tok2strbuf().
+    - CVE-2017-12901: buffer over-read in print-eigrp.c:eigrp_print().
+    - CVE-2017-12902: buffer over-read in print-zephyr.c, several
+      functions.
+    - CVE-2017-12985: buffer over-read in print-ip6.c:ip6_print().
+    - CVE-2017-12986: buffer over-read in print-rt6.c:rt6_print().
+    - CVE-2017-12987: buffer over-read in print-802_11.c:
+      parse_elements().
+    - CVE-2017-12988: buffer over-read in print-telnet.c:
+      telnet_parse().
+    - CVE-2017-12991: buffer over-read in print-bgp.c:bgp_attr_print().
+    - CVE-2017-12992: buffer over-read in print-ripng.c:ripng_print().
+    - CVE-2017-12993: buffer over-read in print-juniper.c, several
+      functions.
+    - CVE-2017-12994: buffer over-read in print-bgp.c:bgp_attr_print().
+    - CVE-2017-12996: buffer over-read in print-pim.c:pimv2_print().
+    - CVE-2017-12998: buffer over-read in print-isoclns.c:
+      isis_print_extd_ip_reach().
+    - CVE-2017-12999: buffer over-read in print-isoclns.c:isis_print().
+    - CVE-2017-13000: buffer over-read in print-802_15_4.c:
+      ieee802_15_4_if_print().
+    - CVE-2017-13001: buffer over-read in print-nfs.c:nfs_printfh().
+    - CVE-2017-13002: buffer over-read in print-aodv.c:
+      aodv_extension().
+    - CVE-2017-13003: buffer over-read in print-lmp.c:lmp_print().
+    - CVE-2017-13004: buffer over-read in print-juniper.c:
+      juniper_parse_header().
+    - CVE-2017-13005: buffer over-read in print-nfs.c:xid_map_enter().
+    - CVE-2017-13006: buffer over-read in print-l2tp.c, several
+      functions.
+    - CVE-2017-13007: buffer over-read in print-pktap.c:
+      pktap_if_print().
+    - CVE-2017-13008: buffer over-read in print-802_11.c:
+      parse_elements().
+    - CVE-2017-13009: buffer over-read in print-mobility.c:
+      mobility_print().
+    - CVE-2017-13010: buffer over-read in print-beep.c:l_strnstart().
+    - CVE-2017-13012: buffer over-read in print-icmp.c:icmp_print().
+    - CVE-2017-13013: buffer over-read in print-arp.c, several
+      functions.
+    - CVE-2017-13014: buffer over-read in print-wb.c:wb_prep(), several
+      functions.
+    - CVE-2017-13015: buffer over-read in print-eap.c:eap_print().
+    - CVE-2017-13016: buffer over-read in print-isoclns.c:esis_print().
+    - CVE-2017-13017: buffer over-read in print-dhcp6.c:
+      dhcp6opt_print().
+    - CVE-2017-13018: buffer over-read in print-pgm.c:pgm_print().
+    - CVE-2017-13019: buffer over-read in print-pgm.c:pgm_print().
+    - CVE-2017-13020: buffer over-read in print-vtp.c:vtp_print().
+    - CVE-2017-13021: buffer over-read in print-icmp6.c:icmp6_print().
+    - CVE-2017-13022: buffer over-read in print-ip.c:ip_printroute().
+    - CVE-2017-13023, CVE-2017-13024, CVE-2017-13025: multiple buffer
+      over-reads in print-mobility.c:mobility_opt_print().
+    - CVE-2017-13026: buffer over-read in print-isoclns.c, several functions.
+    - CVE-2017-13027: buffer over-read in print-lldp.c:
+      lldp_mgmt_addr_tlv_print().
+    - CVE-2017-13028: buffer over-read in print-bootp.c:bootp_print().
+    - CVE-2017-13029: buffer over-read in print-ppp.c:
+      print_ccp_config_options().
+    - CVE-2017-13030: buffer over-read in print-pim.c, several functions.
+    - CVE-2017-13031: buffer over-read in print-frag6.c:frag6_print().
+    - CVE-2017-13032: buffer over-read in print-radius.c:print_attr_string().
+    - CVE-2017-13033: buffer over-read in print-vtp.c:vtp_print().
+    - CVE-2017-13034: buffer over-read in print-pgm.c:pgm_print().
+    - CVE-2017-13035: buffer over-read in print-isoclns.c:isis_print_id().
+    - CVE-2017-13036: buffer over-read in print-ospf6.c:ospf6_decode_v3().
+    - CVE-2017-13037: buffer over-read in print-ip.c:ip_printts().
+    - CVE-2017-13038: buffer over-read in print-ppp.c:handle_mlppp().
+    - CVE-2017-13039: buffer over-read in print-isakmp.c, several
+      functions.
+    - CVE-2017-13040: buffer over-read in print-mptcp.c, several
+      functions.
+    - CVE-2017-13041: buffer over-read in print-icmp6.c:
+      icmp6_nodeinfo_print().
+    - CVE-2017-13042: buffer over-read in print-hncp.c:dhcpv6_print().
+    - CVE-2017-13043: buffer over-read in print-bgp.c:
+      decode_multicast_vpn().
+    - CVE-2017-13044: buffer over-read in print-hncp.c:dhcpv4_print().
+    - CVE-2017-13045: buffer over-read in print-vqp.c:vqp_print().
+    - CVE-2017-13046: buffer over-read in print-bgp.c:bgp_attr_print().
+    - CVE-2017-13047: buffer over-read in print-isoclns.c:esis_print().
+    - CVE-2017-13048: buffer over-read in print-rsvp.c:
+      rsvp_obj_print().
+    - CVE-2017-13049: buffer over-read in print-rx.c:ubik_print().
+    - CVE-2017-13050: buffer over-read in print-rpki-rtr.c:
+      rpki_rtr_pdu_print().
+    - CVE-2017-13051: buffer over-read in print-rsvp.c:
+      rsvp_obj_print().
+    - CVE-2017-13052: buffer over-read in print-cfm.c:cfm_print().
+    - CVE-2017-13053: buffer over-read in print-bgp.c:
+      decode_rt_routing_info().
+    - CVE-2017-13054: buffer over-read in print-lldp.c:
+      lldp_private_8023_print().
+    - CVE-2017-13055: buffer over-read in print-isoclns.c:
+      isis_print_is_reach_subtlv().
+    - CVE-2017-13687: buffer over-read in print-chdlc.c:chdlc_print().
+    - CVE-2017-13688: buffer over-read in print-olsr.c:olsr_print().
+    - CVE-2017-13689: buffer over-read in print-isakmp.c:
+      ikev1_id_print().
+    - CVE-2017-13690: buffer over-read in print-isakmp.c, several
+      functions.
+    - CVE-2017-13725: buffer over-read in print-rt6.c:rt6_print().
+  * Merge from Debian unstable. Remaining changes:
+    - debian/control:
+      + keep older libpcap0.8-dev dependency
+      + don't add breaks/replaces on apparmor-profiles-extras, as
+        tcpdump profile is already dropped from there.
+    - debian/patches/disable_tests.diff:  disable additional tests
+      failing with older pcap versions
+    - debian/patches/90_man_apparmor.diff: mention apparmor profile
+    - debian/tcpdump.dirs: for apparmor force-complain dir
+
+ -- Steve Beattie <sbeattie@ubuntu.com>  Wed, 13 Sep 2017 02:29:51 -0700
+
+tcpdump (4.9.2-1) unstable; urgency=high
+
+  * New upstream release:
+    + Fixes 86 new CVEs, see the upstream changelog for the full list.
+    + Now supports OpenSSL 1.1, so move back to libssl-dev (closes: #859740).
+  * Urgency high due to security fixes.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Fri, 08 Sep 2017 21:30:47 +0200
+
+tcpdump (4.9.1-3) unstable; urgency=high
+
+  * Cherry-pick three upstream commits to fix the following:
+    + CVE-2017-11541: buffer over-read in safeputs() (closes: #873804)
+    + CVE-2017-11542: buffer over-read in pimv1_print() (closes: #873805)
+    + CVE-2017-11543: buffer overflow in sliplink_print() (closes: #873806)
+  * Urgency high due to security fixes.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Mon, 04 Sep 2017 19:45:45 +0200
+
+tcpdump (4.9.1-2) unstable; urgency=medium
+
+  * Disable IKEv2 test which mysteriously fails on ppc64el (closes: #873377).
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sat, 02 Sep 2017 11:01:30 +0200
+
+tcpdump (4.9.1-1) unstable; urgency=medium
+
+  * New upstream release, fixes CVE-2017-11108 (closes: #867718).
+  * Bump Standards-Version to 4.1.0.
+  * debian/watch: add pgpsigurlmangle option.
+  * Add upstream signing key in debian/upstream.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sat, 26 Aug 2017 18:48:32 +0200
+
+tcpdump (4.9.0-3) unstable; urgency=medium
+
+  [ intrigeri ]
+  * Include AppArmor profile from Ubuntu (closes: #866682).
+
+  [ Romain Francoise ]
+  * Bump Standards-Version to 4.0.0.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sun, 02 Jul 2017 12:13:53 +0200
+
+tcpdump (4.9.0-2) unstable; urgency=medium
+
+  * Re-enable crypto support, targeting OpenSSL 1.0 as upstream still
+    doesn't support OpenSSL 1.1.
+  * Drop --enable-ipv6 from configure line, it has been the default for
+    years now.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sat, 11 Feb 2017 16:40:05 +0100
+
 tcpdump (4.9.0-1ubuntu1~ubuntu16.04.1) xenial-security; urgency=medium
 
   * Backport to xenial to fix CVEs (LP: #1662177).
@@ -1126,3 +1317,4 @@ tcpdump (3.3-1) unstable; urgency=low
   * updated to latest upstream version
 
  -- Peter Tobias <tobias@et-inf.fho-emden.de>  Thu, 16 Jan 1997 01:34:00 +0100
+

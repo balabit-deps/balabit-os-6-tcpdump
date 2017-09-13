@@ -3,11 +3,15 @@ Description: Update man page to make AppArmor confinement more discoverable
 Forwarded: no (Ubuntu-specific)
 
 === modified file 'tcpdump.1.in'
-Index: tcpdump-4.8.1/tcpdump.1.in
+---
+ tcpdump.1.in |    8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+Index: b/tcpdump.1.in
 ===================================================================
---- tcpdump-4.8.1.orig/tcpdump.1.in
-+++ tcpdump-4.8.1/tcpdump.1.in
-@@ -153,7 +153,11 @@
+--- a/tcpdump.1.in
++++ b/tcpdump.1.in
+@@ -153,7 +153,11 @@ flag, which causes it to save the packet
  analysis, and/or with the
  .B \-r
  flag, which causes it to read from a saved packet file rather than to
@@ -20,8 +24,8 @@ Index: tcpdump-4.8.1/tcpdump.1.in
  .B \-V
  flag, which causes it to read a list of saved packet files. In all cases,
  only packets that match
-@@ -1888,7 +1892,7 @@
- applied a time stamp to the packet.
+@@ -1879,7 +1883,7 @@ indicates that XO (`exactly once') was \
+ 
  .SH "SEE ALSO"
  stty(1), pcap(3PCAP), bpf(4), nit(4P), pcap-savefile(@MAN_FILE_FORMATS@),
 -pcap-filter(@MAN_MISC_INFO@), pcap-tstamp(@MAN_MISC_INFO@)
